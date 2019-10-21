@@ -33,3 +33,7 @@ yarn run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 帮助信息
+
+ 参数 | 说明 | 类型 | 可选值 | 默认值
