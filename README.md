@@ -1,18 +1,35 @@
-# ctsi-topology-ui
+# ctsi-topology
+```
+基于mxGraph的拓扑图，目前只有展示功能，编辑功能后续会更新。
+```
 
-> 基于mxGraph的拓扑图
-
-## Build Setup
-
-``` bash
-# install dependencies
+## Project setup
+```
+yarn install
 npm install
+```
 
-# serve with hot reload at localhost:8080
-npm run dev
+### Compiles and hot-reloads for development
+```
+yarn run serve
+npm run serve
+```
 
-# build for production with minification
+### Compiles and minifies for production
+```
+yarn run build
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Run your tests
+```
+yarn run test
+```
+
+### Lints and fixes files
+```
+yarn run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
