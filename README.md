@@ -74,9 +74,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  label | 指定节点标签为节点对象的某个属性值 | string | —— | ——
  children | 指定子节点为节点对象的某个属性 | string | —— | ——
  detailConfig | 指定节点详情展示的配置 | object | —— | ——
- build-in-name | 指定节点的内置节点为节点对象的某个属性值 | string | —— | ——
- build-in-key | 指定内置节点的唯一标识的属性，整个拓扑图应该是唯一的 | string | —— | 同节点node-key
- build-in-detailConfig | 指定内置节点详情展示的配置 | object | —— | 同节点detailConfig
+ buildInName | 指定节点的内置节点为节点对象的某个属性值 | string | —— | ——
+ buildInKey | 指定内置节点的唯一标识的属性，整个拓扑图应该是唯一的 | string | —— | 同节点node-key
+ buildInDetailConfig | 指定内置节点详情展示的配置 | object | —— | 同节点detailConfig
  
 #### 事件
 
