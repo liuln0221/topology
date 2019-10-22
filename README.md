@@ -31,9 +31,8 @@ npm run build
 
 ##### 1.引入（main.js）
 
-`
-import Vue from 'vue';
-// 整体引入包
+`import Vue from 'vue';`
+`// 整体引入包`
 import CtsiTopology from 'ctsi-topology';
 // 引入组件样式
 import 'ctsi-topology/dist/ctsi-topology.css';
