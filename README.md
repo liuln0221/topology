@@ -41,7 +41,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  参数 | 说明 | 类型 | 可选值 | 默认值
  ---- | ---- | ---- | ---- | ----
  data | 展示数据 | array | —— | ——
- node-key | 每个节点用来作为唯一标识的属性，整个拓扑图应该是唯一的 | string | —— | ——
+ node-key | 每个节点用来作为唯一标识的属性，整个拓扑图应该是唯一的 | string | —— | id
  node-dbclick | 点击事件是否双击 | boolean | —— | false
  connect-line | 连线数据配置选项，具体看下表 | array | ——
  connect-line-style | 连线样式配置选项，具体看下表，各属性之间用分号(;)连接，如：width=1;color=#c5c5c5 | string | —— | width=1;  color=#c5c5c5;  emphColor=#1296db;  dotted=false;  arrow=true
