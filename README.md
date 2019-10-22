@@ -31,9 +31,9 @@ npm run build
 
 ##### 1.引入（main.js）
 
-`import Vue from 'vue';` </br>
-`import CtsiTopology from 'ctsi-topology';` // 整体引入包 </br>
-`import 'ctsi-topology/dist/ctsi-topology.css';` // 引入组件样式 </br>
+`import Vue from 'vue';`
+`import CtsiTopology from 'ctsi-topology';` // 整体引入包
+`import 'ctsi-topology/dist/ctsi-topology.css';` // 引入组件样式 
 `import App from './App.vue';`
 
 `Vue.use(CtsiTopology);`
@@ -45,24 +45,22 @@ npm run build
 
 #### 2.使用
 
-`
-<template>
-  <div class="example">
-    <ctsi-topology
-      :data="data"
-      :connect-line="connectLines"
-      node-key="instId"
-      :props="defaultProps"
-      @node-click="topologyClick"></ctsi-topology>
-  </div>
-</template>
+`<template>`
+`  <div class="example">`
+`    <ctsi-topology`
+`      :data="data"`
+`      :connect-line="connectLines"`
+`      node-key="instId"`
+`      :props="defaultProps"`
+`      @node-click="topologyClick"></ctsi-topology>`
+`  </div>`
+`</template>`
 
-<script>
-const nodeDetailConfig = {
-  title: '设备信息',
-  config: [
-    // 序列号
-    {
+`<script>`
+`const nodeDetailConfig = {`
+`  title: '设备信息',`
+`  config: [`
+`    {`
       label: '序列号',
       value: 'sn'
     },
