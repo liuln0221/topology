@@ -39,7 +39,7 @@ npm run build
 `Vue.use(CtsiTopology);`
 
 `new Vue({` </br>
-&nbsp;&nbsp;`el: '#app',` </br>
+&ensp;`el: '#app',` </br>
 &nbsp;&nbsp;`render: h => h(App)` </br>
 `});`
 
