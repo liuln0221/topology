@@ -31,6 +31,7 @@ npm run build
 
 ##### 1.引入（main.js）
 
+```
 `import Vue from 'vue';` </br>
 `import CtsiTopology from 'ctsi-topology';` // 整体引入包 </br>
 `import 'ctsi-topology/dist/ctsi-topology.css';` // 引入组件样式 </br>
@@ -42,6 +43,7 @@ npm run build
 &emsp;`el: '#app',` </br>
 &emsp;`render: h => h(App)` </br>
 `});`
+```
 
 #### 2.使用（example.vue）
 
