@@ -47,46 +47,107 @@ new Vue({
 
 #### 2.使用（example.vue）
 
-`<template>` </br>
-&emsp;`<div class="example">` </br>
-&emsp;&emsp;`<ctsi-topology` </br>
-&emsp;&emsp;&emsp;`:data="data"` </br>
-&emsp;&emsp;&emsp;`:connect-line="connectLines"` </br>
-&emsp;&emsp;&emsp;`node-key="instId"` </br>
-&emsp;&emsp;&emsp;`:props="defaultProps"` </br>
-&emsp;&emsp;&emsp;`@node-click="topologyClick"></ctsi-topology>` </br>
-&emsp;`</div>` </br>
-`</template>` </br>
+```
+<template>
+  <div class="example">
+    <ctsi-topology
+      :data="data"
+      :connect-line="connectLines"
+      node-key="instId"
+      :props="defaultProps"
+      @node-click="topologyClick"></ctsi-topology>
+  </div>
+</template>
 
-`<script>` </br>
-`const nodeDetailConfig = {` </br>
-&emsp;`title: '设备信息',` </br>
-&emsp;`config: [` </br>
-&emsp;&emsp;`{ label: '序列号', value: 'sn' },` </br>
-&emsp;&emsp;`{ label: '名称', value: 'name' }` </br>
-&emsp;`]` </br>
-`}; `</br>
-`const nodeChildDetailConfig = {` </br>
-&emsp;`title: '端口信息',` </br>
-&emsp;`config: [` </br>
-&emsp;&emsp;`{ label: '端口名称', value: 'name' },` </br>
-&emsp;&emsp;`{ label: '端口带宽', value: 'bandWidth' }` </br>
-&emsp;`]` </br>
-&emsp;`};` </br>
-
-`export default {` </br>
-&emsp;`name: 'Example',` </br>
-&emsp;`data() {` </br>
-&emsp;&emsp;`return {` </br>
-&emsp;&emsp;&emsp;`defaultProps: {` </br>
-&emsp;&emsp;&emsp;&emsp;`label: 'sn',` </br>
-&emsp;&emsp;&emsp;&emsp;`detailConfig: 'detailModal',` </br>
-&emsp;&emsp;&emsp;&emsp;`buildInName: 'ports',` </br>
-&emsp;&emsp;&emsp;&emsp;`buildInKey: 'id'` </br>
-&emsp;&emsp;&emsp;`},` </br>
-&emsp;&emsp;&emsp;`data: [` </br>
-&emsp;&emsp;&emsp;&emsp;`[` </br>
-&emsp;&emsp;&emsp;&emsp;&emsp;`{` </br>
+<script>
+const nodeDetailConfig = {
+  title: '设备信息',
+  config: [
+    // 序列号
+    {
+      label: '序列号',
+      value: 'sn'
+    },
+    // 名称
+    {
+      label: '名称',
+      value: 'name'
+    },
+    // 资产编号
+    {
+      label: '资产编号',
+      value: 'identifier'
+    },
+    // 机房
+    {
+      label: '机房',
+      value: 'roomName'
+    },
+    // 机柜
+    {
+      label: '机柜',
+      value: 'cabinetName'
+    },
+    // U位（容占）
+    {
+      label: '容占',
+      value: 'startU'
+    },
+    // 设备类型
+    {
+      label: '设备类型',
+      value: 'classify'
+    }
+  ]
+};
+const nodeChildDetailConfig = {
+  title: '端口信息',
+  config: [
+    // 端口名称
+    {
+      label: '端口名称',
+      value: 'name'
+    },
+    // 端口带宽
+    {
+      label: '端口带宽',
+      value: 'bandWidth'
+    },
+    // 端口类型
+    {
+      label: '端口类型',
+      value: 'type'
+    },
+    // MAC/WWN
+    {
+      label: 'MAC/WWN',
+      value: 'macOrWwn'
+    },
+    // IP
+    {
+      label: 'IP',
+      value: 'ip'
+    },
+    // VLAN
+    {
+      label: 'VLAN',
+      value: 'vlan'
+    }
+  ]
+};
+export default {
+  name: 'Example',
+  data() {
+    return {
+      defaultProps: {
+        label: 'sn',
+        detailConfig: 'detailModal',
+        buildInName: 'ports',
+        buildInKey: 'id'
+      },
+      data: [
+        [
+          {
             instId: 2933,
             ports: [
               {
@@ -354,7 +415,7 @@ a {
   color: #42b983;
 }
 </style>
-`
+```
 
 ### 帮助信息
 
