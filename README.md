@@ -43,7 +43,7 @@ npm run build
 &emsp;`render: h => h(App)` </br>
 `});`
 
-#### 2.使用
+#### 2.使用（example.vue）
 
 `<template>` </br>
 &emsp;`<div class="example">` </br>
@@ -64,54 +64,27 @@ npm run build
 &emsp;&emsp;`{ label: '名称', value: 'name' }` </br>
 &emsp;`]` </br>
 `}; `</br>
-const nodeChildDetailConfig = {
-  title: '端口信息',
-  config: [
-    // 端口名称
-    {
-      label: '端口名称',
-      value: 'name'
-    },
-    // 端口带宽
-    {
-      label: '端口带宽',
-      value: 'bandWidth'
-    },
-    // 端口类型
-    {
-      label: '端口类型',
-      value: 'type'
-    },
-    // MAC/WWN
-    {
-      label: 'MAC/WWN',
-      value: 'macOrWwn'
-    },
-    // IP
-    {
-      label: 'IP',
-      value: 'ip'
-    },
-    // VLAN
-    {
-      label: 'VLAN',
-      value: 'vlan'
-    }
-  ]
-};
-export default {
-  name: 'Example',
-  data() {
-    return {
-      defaultProps: {
-        label: 'sn',
-        detailConfig: 'detailModal',
-        buildInName: 'ports',
-        buildInKey: 'id'
-      },
-      data: [
-        [
-          {
+`const nodeChildDetailConfig = {` </br>
+&emsp;`title: '端口信息',` </br>
+&emsp;`config: [` </br>
+&emsp;&emsp;`{ label: '端口名称', value: 'name' },` </br>
+&emsp;&emsp;`{ label: '端口带宽', value: 'bandWidth' }` </br>
+&emsp;`]` </br>
+&emsp;`};` </br>
+
+`export default {` </br>
+&emsp;`name: 'Example',` </br>
+&emsp;`data() {` </br>
+&emsp;&emsp;`return {` </br>
+&emsp;&emsp;&emsp;`defaultProps: {` </br>
+&emsp;&emsp;&emsp;&emsp;`label: 'sn',` </br>
+&emsp;&emsp;&emsp;&emsp;`detailConfig: 'detailModal',` </br>
+&emsp;&emsp;&emsp;&emsp;`buildInName: 'ports',` </br>
+&emsp;&emsp;&emsp;&emsp;`buildInKey: 'id'` </br>
+&emsp;&emsp;&emsp;`},` </br>
+&emsp;&emsp;&emsp;`data: [` </br>
+&emsp;&emsp;&emsp;&emsp;`[` </br>
+&emsp;&emsp;&emsp;&emsp;&emsp;`{` </br>
             instId: 2933,
             ports: [
               {
