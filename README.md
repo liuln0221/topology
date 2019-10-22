@@ -40,7 +40,7 @@ npm run build
 
 `new Vue({` </br>
 &ensp;`el: '#app',` </br>
-&nbsp;&nbsp;`render: h => h(App)` </br>
+&emsp;`render: h => h(App)` </br>
 `});`
 
 #### 2.使用
