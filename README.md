@@ -32,17 +32,17 @@ npm run build
 ##### 1.引入（main.js）
 
 ```
-`import Vue from 'vue';` </br>
-`import CtsiTopology from 'ctsi-topology';` // 整体引入包 </br>
-`import 'ctsi-topology/dist/ctsi-topology.css';` // 引入组件样式 </br>
-`import App from './App.vue';` </br>
+import Vue from 'vue';
+import CtsiTopology from 'ctsi-topology'; // 整体引入包
+import 'ctsi-topology/dist/ctsi-topology.css'; // 引入组件样式
+import App from './App.vue';
 
-`Vue.use(CtsiTopology);`
+Vue.use(CtsiTopology);
 
-`new Vue({` </br>
-&emsp;`el: '#app',` </br>
-&emsp;`render: h => h(App)` </br>
-`});`
+new Vue({
+  el: '#app',
+  render: h => h(App)
+});
 ```
 
 #### 2.使用（example.vue）
