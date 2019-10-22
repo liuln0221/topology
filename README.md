@@ -77,7 +77,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  buildInName | 指定节点的内置节点为节点对象的某个属性值 | string | —— | ——
  buildInKey | 指定内置节点的唯一标识的属性，整个拓扑图应该是唯一的 | string | —— | 同节点node-key
  
-#### detail-config
+#### detailConfig
  
  参数 | 说明 | 类型 | 可选值 | 默认值
  ---- | ---- | ---- | ---- | ----
