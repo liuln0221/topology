@@ -46,6 +46,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  connect-line | 连线数据配置选项，具体看下表 | array | ——
  connect-line-style | 连线样式配置选项，具体看下表，各属性之间用分号(;)连接，如：width=1;color=#c5c5c5 | string | —— | width=1;color=#c5c5c5;emphColor=#1296db;dotted=false;arrow=true
  props | 配置选项，具体看下表 | object | —— | ——
+ operate-button | 是否展示操作按钮 | boolean | —— | true
+ operate-button-position | 操作按钮位置 | string | top left / top center / top right  bottom left / bottom center / bottom right  | top center
  
 #### connect-line
 
