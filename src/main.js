@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 
 // 单独引入指令文件
-// import pkgName from '../packages/test-directive/index'
+// import ctsiTopology from '../packages/ctsiTopology/index'
 // 整体引入包
 import pkgName from '../packages/index'
 

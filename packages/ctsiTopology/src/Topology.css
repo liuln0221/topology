@@ -3,7 +3,27 @@
   overflow: hidden;
 }
 
-#topology button {
+#topology {
+  padding: 20px;
+}
+
+#topology .operateBtn {
+  display: flex;
+}
+
+#topology .operateBtn.left {
+  justify-content: flex-start;
+}
+
+#topology .operateBtn.center {
+  justify-content: center;
+}
+
+#topology .operateBtn.right {
+  justify-content: flex-end;
+}
+
+#topology .operateBtn button {
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
@@ -26,7 +46,7 @@
   font-size: 12px;
 }
 
-#topology button+button {
+#topology .operateBtn button+button {
   margin-left: 10px;
 }
 
@@ -149,6 +169,10 @@
   display: flex;
   line-height: 20px;
   padding: 0 10px;
+}
+
+.node-detail .node-detail__content:first-child {
+  margin-top: 10px;
 }
   
 .node-detail .node-detail__content .node-detail__content__label {

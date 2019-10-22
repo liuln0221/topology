@@ -35,7 +35,8 @@ const {
   // mxCircleLayout
 } = mxgraph;
 export class TopoModel {
-  constructor(document) {
+  constructor(document, props) {
+    this.props = props;
     this.graph = new mxGraph(document);
     const parent1 = new mxHierarchicalLayout(this.graph, mxConstants.DIRECTION_NORTH);
     this.parent = parent1.graph.getDefaultParent();
@@ -52,9 +53,9 @@ export class TopoModel {
     const cells = this.graph.getModel
       ? Object.values(this.graph.getModel().cells).filter((cell) => cell.isVertex())
       : [];
-    // 刀框、负载均衡、业务设备节点不展示详情
+    // 是否存在展示详情的节点
     const isExistDetail = cells.some((cell) => {
-      return cell.detail.detailConfig && cell.detail.detailConfig.config.length > 0;
+      return cell.detail[this.props.detailConfig] && cell.detail[this.props.detailConfig].config.length > 0;
     });
     container.style.height = cells.length > 0
      ? `${container.clientHeight + (isExistDetail ? 190 : 0)}px`
@@ -146,7 +147,7 @@ export class TopoModel {
         }
         // 当选中节点时，增加详情展示节点
         if (cell.isVertex() && !cell.detailOf) {
-          if (cell.detail.detailConfig && cell.detail.detailConfig.config.length > 0) {
+          if (cell.detail[this.props.detailConfig] && cell.detail[this.props.detailConfig].config.length > 0) {
             const detailNode = self.getDetailNode(cell);
             cell.ex = self.graph.addCell(detailNode, self.parent);
             cell.ex.detailOf = cell.id;
@@ -233,14 +234,14 @@ export class TopoModel {
   getDetailNode(cell) {
     let config = [];
     let title = '';
-    if (cell.detail.detailConfig && cell.detail.detailConfig.config.length > 0) {
-      config = cell.detail.detailConfig.config.map(i => {
+    if (cell.detail[this.props.detailConfig] && cell.detail[this.props.detailConfig].config.length > 0) {
+      config = cell.detail[this.props.detailConfig].config.map(i => {
         return {
           label: i.label,
           value: cell.detail[i.value] || '-'
         }
       });
-      title = cell.detail.detailConfig.title;
+      title = cell.detail[this.props.detailConfig].title;
     }
     
     const geometryCell = cell;
@@ -254,7 +255,7 @@ export class TopoModel {
         : geometryCell.getParent().geometry ? geometryCell.getParent().geometry.y : 0
       ) + geometryCell.geometry.y + geometryCell.geometry.height + (cell.port ? 5 : 1),
       200,
-      50 + config.length * 20
+      config.length * 20 + (title ? 50 : 10)
     );
     const detailInfoList = config.map((port) => {
       return '<div class="node-detail__content">' +
@@ -262,7 +263,8 @@ export class TopoModel {
         `<span class="node-detail__content__value" title="${port.value}">${port.value}</span>` +
       '</div>';
     });
-    const detailInfo = `<div class="node-detail"><div class="node-detail__title">${title}</div>${
+    const titleInfo = title ? `<div class="node-detail__title">${title}</div>` : '';
+    const detailInfo = `<div class="node-detail">${titleInfo}${
         detailInfoList.join('')}</div>`;
     const detailNode = new mxCell(detailInfo, geometry, 'fillColor=none;strokeColor=none;');
     detailNode.setVertex(true);
@@ -270,10 +272,10 @@ export class TopoModel {
   }
 
   /**
-   * @description 设备业务设备title
+   * @description 父节点title
    * @param cell 当前节点
    */
-  getNodeOfHasChildren(parent, x, y, width, height, label) {
+  getParentNode(parent, x, y, width, height, label) {
     const geometry = new mxGeometry(x, y, width, height);
     const detailInfo = `<div class="node-parent" style="width: ${
       width}px"><div class="node-parent__title">` +
@@ -316,9 +318,10 @@ export class TopoModel {
    * @param label 节点名称
    * @param iconClass 图标样式
    */
-  getNode(parent, node, x, y, label, iconClass, nodeChildKey) {
-    const width = node[nodeChildKey] && node[nodeChildKey].length > 0
-      ? (node[nodeChildKey].length + 1) * 25 > 100 ? (node[nodeChildKey].length + 1) * 25 : 100
+  getNode(parent, node, x, y, label, iconClass) {
+    iconClass = iconClass ? iconClass : 'icon-title-server'; // 默认图标
+    const width = node[this.props.buildInName] && node[this.props.buildInName].length > 0
+      ? (node[this.props.buildInName].length + 1) * 25 > 100 ? (node[this.props.buildInName].length + 1) * 25 : 100
       : 100;
     // 节点
     const geometry = new mxGeometry(x, y, width, 120);
@@ -337,7 +340,8 @@ export class TopoModel {
    * @param node 父级节点对象
    * @param index 下标
    */
-  getPort(parent, node, index, iconClass) {
+  getBuildIn(parent, node, index, iconClass) {
+    iconClass = iconClass ? iconClass : 'icon-title-server'; // 默认图标
     const x = index * 25 + ((parent.geometry.width) / 2 - 12.5 * node.ports.length) + 5;
     const y = parent.geometry.height - 25;
     const style = 'fillColor=none;strokeColor=none;';
