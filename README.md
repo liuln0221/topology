@@ -63,41 +63,13 @@ new Vue({
 const nodeDetailConfig = {
   title: '设备信息',
   config: [
-    // 序列号
-    {
-      label: '序列号',
-      value: 'sn'
-    },
-    // 名称
-    {
-      label: '名称',
-      value: 'name'
-    },
-    // 资产编号
-    {
-      label: '资产编号',
-      value: 'identifier'
-    },
-    // 机房
-    {
-      label: '机房',
-      value: 'roomName'
-    },
-    // 机柜
-    {
-      label: '机柜',
-      value: 'cabinetName'
-    },
-    // U位（容占）
-    {
-      label: '容占',
-      value: 'startU'
-    },
-    // 设备类型
-    {
-      label: '设备类型',
-      value: 'classify'
-    }
+    { label: '序列号', value: 'sn' },
+    { label: '名称', value: 'name' },
+    { label: '资产编号', value: 'identifier' },
+    { label: '机房', value: 'roomName' },
+    { label: '机柜', value: 'cabinetName' },
+    { label: '容占', value: 'startU' },
+    { label: '设备类型', value: 'classify' }
   ]
 };
 const nodeChildDetailConfig = {
