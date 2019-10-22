@@ -39,63 +39,31 @@ npm run build
 `Vue.use(CtsiTopology);`
 
 `new Vue({` </br>
-&ensp;`el: '#app',` </br>
+&emsp;`el: '#app',` </br>
 &emsp;`render: h => h(App)` </br>
 `});`
 
 #### 2.使用
 
 `<template>` </br>
-`  <div class="example">` </br>
-`    <ctsi-topology` </br>
-`      :data="data"` </br>
-`      :connect-line="connectLines"` </br>
-`      node-key="instId"` </br>
-`      :props="defaultProps"` </br>
-`      @node-click="topologyClick"></ctsi-topology>` </br>
-`  </div>` </br>
+&emsp;`<div class="example">` </br>
+&emsp;&emsp;`<ctsi-topology` </br>
+&emsp;&emsp;&emsp;`:data="data"` </br>
+&emsp;&emsp;&emsp;`:connect-line="connectLines"` </br>
+&emsp;&emsp;&emsp;`node-key="instId"` </br>
+&emsp;&emsp;&emsp;`:props="defaultProps"` </br>
+&emsp;&emsp;&emsp;`@node-click="topologyClick"></ctsi-topology>` </br>
+&emsp;`</div>` </br>
 `</template>` </br>
 
-`<script>`
-`const nodeDetailConfig = {`
-`  title: '设备信息',`
-`  config: [`
-`    {`
-      label: '序列号',
-      value: 'sn'
-    },
-    // 名称
-    {
-      label: '名称',
-      value: 'name'
-    },
-    // 资产编号
-    {
-      label: '资产编号',
-      value: 'identifier'
-    },
-    // 机房
-    {
-      label: '机房',
-      value: 'roomName'
-    },
-    // 机柜
-    {
-      label: '机柜',
-      value: 'cabinetName'
-    },
-    // U位（容占）
-    {
-      label: '容占',
-      value: 'startU'
-    },
-    // 设备类型
-    {
-      label: '设备类型',
-      value: 'classify'
-    }
-  ]
-};
+`<script>` </br>
+`const nodeDetailConfig = {` </br>
+&emsp;`title: '设备信息',` </br>
+&emsp;`config: [` </br>
+&emsp;&emsp;`{ label: '序列号', value: 'sn' },` </br>
+&emsp;&emsp;`{ label: '名称', value: 'name' }` </br>
+&emsp;`]` </br>
+`}; `</br>
 const nodeChildDetailConfig = {
   title: '端口信息',
   config: [
