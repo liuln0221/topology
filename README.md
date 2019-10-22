@@ -31,15 +31,6 @@ npm run build
 
 ##### 1.引入（main.js）
 
-#```
-@Override </br>
-protected void onDestroy() { </br>
-    EventBus.getDefault().unregister(this); </br>
-    super.onDestroy(); </br>
-}
-#```  
-
-#```
 `import Vue from 'vue';` </br>
 `import CtsiTopology from 'ctsi-topology';` // 整体引入包 </br>
 `import 'ctsi-topology/dist/ctsi-topology.css';` // 引入组件样式 </br>
@@ -421,8 +412,6 @@ a {
 }
 </style>
 `
-#```
-
 
 ### 帮助信息
 
