@@ -40,7 +40,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
  参数 | 说明 | 类型 | 可选值 | 默认值
  ---- | ---- | ---- | ---- | ----
- data | 展示数据 | object | —— | ——
+ data | 展示数据 | array | —— | ——
  node-key | 每个节点用来作为唯一标识的属性，整个拓扑图应该是唯一的 | string | —— | ——
  node-dbclick | 点击事件是否双击 | boolean | —— | false
  connect-line | 连线数据配置选项，具体看下表 | array | ——
