@@ -32,10 +32,10 @@ npm run build
 ##### 1.引入（main.js）
 
 #```
-@Override
-protected void onDestroy() {
-    EventBus.getDefault().unregister(this);
-    super.onDestroy();
+@Override </br>
+protected void onDestroy() { </br>
+    EventBus.getDefault().unregister(this); </br>
+    super.onDestroy(); </br>
 }
 #```  
 
