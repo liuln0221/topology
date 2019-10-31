@@ -4,9 +4,9 @@ import App from './App.vue'
 // 单独引入指令文件
 // import ctsiTopology from '../packages/ctsiTopology/index'
 // 整体引入包
-import pkgName from '../packages/index'
+import pkgName from '../../src/index'
 
-import '@/styles/index.css'
+import './styles/index.css'
 
 Vue.use(pkgName)
 

@@ -4,7 +4,7 @@
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name ctsi-topology packages/index.js",
+    "build": "vue-cli-service build --target lib --name ctsi-topology src/index.js",
     "lint": "vue-cli-service lint"
   },
   "main": "./dist/ctsi-topology.common.js",
