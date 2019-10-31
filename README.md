@@ -25,7 +25,7 @@ npm run build
 
 #### 效果图
 
-![image](https://github.com/liuln0221/ctsi-topology/blob/master/demo/topology.png)
+![image](https://github.com/liuln0221/ctsi-topology/blob/master/Demo/topology.png)
 
 #### 代码
 
