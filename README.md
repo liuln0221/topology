@@ -21,6 +21,11 @@ yarn run build
 npm run build
 ```
 
+## 使用
+```
+npm install ctsi-topology
+```
+
 ### 示例
 
 #### 效果图
