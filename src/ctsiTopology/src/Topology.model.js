@@ -341,7 +341,7 @@ export class TopoModel {
    * @param index 下标
    */
   getBuildIn(parent, node, index, iconClass) {
-    iconClass = iconClass ? iconClass : 'icon-title-server'; // 默认图标
+    iconClass = iconClass ? iconClass : 'icon-title-port'; // 默认图标
     const x = index * 25 + ((parent.geometry.width) / 2 - 12.5 * node.ports.length) + 5;
     const y = parent.geometry.height - 25;
     const style = 'fillColor=none;strokeColor=none;';

@@ -1,3 +1,5 @@
+@import '../styles/index.css';
+
 #id {
   width: 100% !important;
   overflow: hidden;
