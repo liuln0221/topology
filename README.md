@@ -306,7 +306,7 @@ a {
  ---- | ---- | ---- | ---- | ----
  label | 指定节点标签为节点对象的某个属性值 | string | —— | ——
  children | 指定子节点为节点对象的某个属性 | string | —— | ——
- iconClass | 节点/内置节点图标样式 | string | —— | icon-title-server
+ iconClass | 节点/内置节点图标样式 | string | —— | ——
  detailConfig | 指定节点详情展示的配置，配置选项，具体看下表 | object | —— | ——
  buildInName | 指定节点的内置节点为节点对象的某个属性值 | string | —— | ——
  buildInKey | 指定内置节点的唯一标识的属性，整个拓扑图应该是唯一的 | string | —— | 同节点node-key
