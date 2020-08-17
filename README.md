@@ -1,4 +1,4 @@
-# ctsi-topology
+# topology
 ```
 基于mxGraph的拓扑图，目前只有展示功能，编辑功能后续会更新。
 ```
@@ -23,14 +23,14 @@ npm run build
 
 ## 使用
 ```
-npm install ctsi-topology
+npm install topology
 ```
 
 ### 示例
 
 #### 效果图
 
-![image](https://github.com/liuln0221/ctsi-topology/blob/master/demo/topology.png)
+![image](https://github.com/liuln0221/topology/blob/master/demo/topology.png)
 
 #### 代码
 
@@ -38,11 +38,11 @@ npm install ctsi-topology
 
 ```
 import Vue from 'vue';
-import CtsiTopology from 'ctsi-topology'; // 整体引入包
-import 'ctsi-topology/dist/ctsi-topology.css'; // 引入组件样式
+import Topology from 'topology'; // 整体引入包
+import 'topology/dist/topology.css'; // 引入组件样式
 import App from './App.vue';
 
-Vue.use(CtsiTopology);
+Vue.use(Topology);
 
 new Vue({
   el: '#app',
@@ -55,12 +55,12 @@ new Vue({
 ```
 <template>
   <div class="example">
-    <ctsi-topology
+    <topology
       :data="data"
       :connect-line="connectLines"
       node-key="instId"
       :props="defaultProps"
-      @node-click="topologyClick"></ctsi-topology>
+      @node-click="topologyClick"></topology>
   </div>
 </template>
 

@@ -1,11 +1,11 @@
 <template>
   <div class="example">
-    <ctsi-topology
+    <topology
       :data="data"
       :connect-line="connectLines"
       node-key="instId"
       :props="defaultProps"
-      @node-click="topologyClick"></ctsi-topology>
+      @node-click="topologyClick"></topology>
   </div>
 </template>
 

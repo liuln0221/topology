@@ -27,7 +27,7 @@ import { TopoModel } from './Topology.model';
 import './Topology.css';
 
 export default {
-  name: 'ctsiTopology',
+  name: 'topology',
   props: {
     data: Array,
     connectLine: Array,
