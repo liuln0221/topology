@@ -1,11 +1,11 @@
 <template>
   <div class="example">
-    <topology
+    <topology-graph
       :data="data"
       :connect-line="connectLines"
       node-key="instId"
       :props="defaultProps"
-      @node-click="topologyClick"></topology>
+      @node-click="topologyClick"></topology-graph>
   </div>
 </template>
 

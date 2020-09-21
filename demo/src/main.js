@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 
 // 单独引入指令文件
-// import topology from '../packages/topology/index'
+// import topologyGraph from '../packages/topology-graph/index'
 // 整体引入包
 import pkgName from '../../src/index'
 

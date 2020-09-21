@@ -1,4 +1,4 @@
-# topology
+# topology-graph
 ```
 基于mxGraph的拓扑图，目前只有展示功能，编辑功能后续会更新。
 ```
@@ -23,14 +23,14 @@ npm run build
 
 ## 使用
 ```
-npm install topology
+npm install topology-graph
 ```
 
 ### 示例
 
 #### 效果图
 
-![image](https://github.com/liuln0221/topology/blob/master/demo/topology.png)
+![image](https://github.com/liuln0221/topology-graph/blob/master/demo/topology.png)
 
 #### 代码
 
@@ -38,11 +38,11 @@ npm install topology
 
 ```
 import Vue from 'vue';
-import Topology from 'topology'; // 整体引入包
-import 'topology/dist/topology.css'; // 引入组件样式
+import TopologyGraph from 'topology-graph'; // 整体引入包
+import 'topology-graph/dist/topology-graph.css'; // 引入组件样式
 import App from './App.vue';
 
-Vue.use(Topology);
+Vue.use(TopologyGraph);
 
 new Vue({
   el: '#app',
@@ -55,12 +55,12 @@ new Vue({
 ```
 <template>
   <div class="example">
-    <topology
+    <topology-graph
       :data="data"
       :connect-line="connectLines"
       node-key="instId"
       :props="defaultProps"
-      @node-click="topologyClick"></topology>
+      @node-click="topologyClick"></topology-graph>
   </div>
 </template>
 

@@ -1,13 +1,13 @@
 {
-  "name": "topology-ui",
-  "version": "1.0.0",
+  "name": "topology-graph",
+  "version": "1.0.1",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name topology src/index.js",
+    "build": "vue-cli-service build --target lib --name topology-graph src/index.js",
     "lint": "vue-cli-service lint"
   },
-  "main": "./dist/topology.common.js",
+  "main": "./dist/topology-graph.common.js",
   "files": [
     "dist/*",
     "src/*",
