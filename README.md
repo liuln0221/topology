@@ -30,7 +30,7 @@ npm install topology-graph
 
 #### 效果图
 
-![image](https://github.com/liuln0221/topology-graph/blob/master/demo/topology.png)
+![image](https://github.com/liuln0221/topology/blob/master/demo/topology.png)
 
 #### 代码
 
